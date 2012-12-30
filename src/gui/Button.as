@@ -95,5 +95,14 @@ package gui
 			TweenLite.to(e.currentTarget.rect, 0.3, {tint:0xBDBE57});
 			//TweenLite.to(e.currentTarget.border, 1, {tint:0xFFFFFF});
 		}
+		public function activate(): void
+		{
+			this.visible = true;
+		}
+		
+		public function deactivate(): void
+		{
+			this.visible = false;
+		}
 	}
 }

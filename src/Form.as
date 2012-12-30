@@ -130,5 +130,14 @@ package
 			_txtfl_adjective.txtField.text = '';
 			_txtfl_verb.txtField.text = '';
 		}
+		public function activate(): void
+		{
+			this.visible = true;
+		}
+		
+		public function deactivate(): void
+		{
+			this.visible = false;
+		}
 	}
 }
