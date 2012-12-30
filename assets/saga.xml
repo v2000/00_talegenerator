@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sagalist>
+<saga>
+	<mysaga>
+	
+		<header>My saga</header>
+		<body>Det var en gång ett {ADJECTIVE} {NOUN} som hette {NAME} och som skulle ut och {VERB} med sin {ADJECTIVE} {NOUN}. Men då kom en {NOUN} och började {VERB}.De tog {ADJECTIVE} {NOUN} och {ADJECTIVE} {NOUN} och gick till {NOUN}.  Sedan kom  {NAME} och uppmanade dem till {NOUN}.
+      </body>
+		
+	</mysaga>
+</saga>
+</sagalist>
