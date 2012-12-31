@@ -5,15 +5,15 @@ package gui
 	import flash.text.TextFieldType;
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
-	
+
+	//textrutan var du skriver text
 	public class MyInputTextField extends Sprite
 	{
 		private var _txtFormat:TextFormat;
 		private var _txtField:TextField;
 		
 		public function MyInputTextField()
-		{
-			
+		{			
 			_txtFormat = new TextFormat();
 			_txtFormat.color = 0x000000;
 			_txtFormat.size = 16;

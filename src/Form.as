@@ -7,7 +7,8 @@ package
 	
 	import gui.MyInputTextField;
 	import gui.MyTextField;
-	
+
+	//skapa ett formulär för att ange orden
 	public class Form extends Sprite
 	{
 		private var _header:MyTextField;

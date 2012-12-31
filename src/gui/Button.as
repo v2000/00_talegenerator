@@ -9,7 +9,8 @@ package gui
 	import flash.display.GradientType;
 	import flash.geom.Matrix;
 	import flash.events.MouseEvent;
-	
+
+	//skapa en knappen
 	public class Button extends Sprite
 	{
 		private var _col:uint;
@@ -23,9 +24,11 @@ package gui
 		public function Button(txt:String)
 		{			
 			_txt = txt;
-			
+
+			//skapa en knappen
 			createRoundRect();
 			
+			//skapa en text på knappen
 			var labl:TextField = createLabel();
 			addChild(labl);
 			labl.mouseEnabled = false;		
@@ -36,6 +39,7 @@ package gui
 		}
 		private function createRoundRect():void 
 		{ 
+            //skapa en rektangel med rundade hörn och övertoningsfyllning			
 			rect=new Sprite();
 			addChild(rect);
 			rect.graphics.lineStyle(1, 0xFFFFFF);
@@ -54,7 +58,8 @@ package gui
 			rectGradient.graphics.beginGradientFill(gradType, colors, alphas, ratios,matr);
 			rectGradient.graphics.drawRoundRect(0, 0, 100, 30, 15);
 			rectGradient. graphics.endFill();
-			
+
+            //skapa en rektangel med rundade hörn och ingen fylla
 			border=new Sprite();
 			addChild(border);
 			border.graphics.lineStyle(1, 0x999900);
@@ -79,12 +84,12 @@ package gui
 			
 			return txt;
 		}
+		//ändra färg på en knapp när musen förflyttas
 		public function onMouseOut_changeColor(e:MouseEvent):void
 		{
 			TweenLite.to(e.currentTarget.rect, 0.3, {tint:0xBDBE57});
 			TweenLite.to(e.currentTarget.border, 0.3, {tint:0x999900});
-		}
-		
+		}		
 		public function onMouseOver_changeColor(e:MouseEvent):void
 		{
 			TweenLite.to(e.currentTarget.rect, 0.3, {tint:0xCBCD00});
@@ -93,13 +98,11 @@ package gui
 		public function onButtonUp(e:MouseEvent):void
 		{
 			TweenLite.to(e.currentTarget.rect, 0.3, {tint:0xBDBE57});
-			//TweenLite.to(e.currentTarget.border, 1, {tint:0xFFFFFF});
 		}
 		public function activate(): void
 		{
 			this.visible = true;
-		}
-		
+		}	
 		public function deactivate(): void
 		{
 			this.visible = false;
