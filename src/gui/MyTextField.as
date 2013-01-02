@@ -13,13 +13,13 @@ package gui
 		private var _txtFormat:TextFormat;
 		private var _txtField:TextField;
 		
-		public function MyTextField(size:uint, width:uint, height:uint, color:uint, myString:String)
+		public function MyTextField(align:String, size:uint, width:uint, height:uint, color:uint, myString:String)
 		{
 			_txtFormat = new TextFormat();
 			_txtFormat.color = color;
 			_txtFormat.size = size;
-			_txtFormat.font = 'Verdana';
-			_txtFormat.align = TextFormatAlign.LEFT;			
+			_txtFormat.font = 'Verdana';		
+			_txtFormat.align = align;			
 			
 			_txtField = new TextField();			
 
@@ -28,6 +28,7 @@ package gui
 			_txtField.width = width;
 			_txtField.height = height;
 			_txtField.multiline = true;
+			_txtField.wordWrap = true;
 			_txtField.selectable = false;
 			_txtField.type=TextFieldType.DYNAMIC;
 				

@@ -4,6 +4,7 @@ package
 	import flash.filters.BevelFilter;
 	import flash.filters.DropShadowFilter;
 	import flash.events.Event;
+	import flash.text.TextFormatAlign;
 	
 	import gui.MyInputTextField;
 	import gui.MyTextField;
@@ -34,9 +35,9 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			
-			_header=new MyTextField(30,250,40, 0xBDBE57,  'Skriv din saga');
+			_header=new MyTextField(TextFormatAlign.CENTER,30,250,40, 0xBDBE57,  'Skriv din saga');
 			addChild(_header);
-			_header.x=140;
+			_header.x=130;
 			_header.y=0;
 			_header.filters = [ new DropShadowFilter(4,45,0,.5), 
 				new BevelFilter(4,45,0xffffff,.3,0,.4)];
@@ -63,23 +64,23 @@ package
 			_txtfl_verb.y=_txtfl_adjective.y + 35;
 			
 			
-			_name=new MyTextField(16,100, 25, 0xFFFFFF,  'Name');
+			_name=new MyTextField(TextFormatAlign.LEFT, 16,100, 25, 0xFFFFFF,  'Name');
 			addChild(_name);
 			_name.y=_header.y+60;
 			
-			_noun=new MyTextField(16,100, 25, 0xFFFFFF, 'Noun');
+			_noun=new MyTextField(TextFormatAlign.LEFT, 16,100, 25, 0xFFFFFF, 'Noun');
 			addChild(_noun);
 			_noun.y=_txtfl_name.y + 35;
 			
-			_adjective=new MyTextField(16,100, 25, 0xFFFFFF, 'Adjective');
+			_adjective=new MyTextField(TextFormatAlign.LEFT, 16,100, 25, 0xFFFFFF, 'Adjective');
 			addChild(_adjective);
 			_adjective.y=_txtfl_noun.y + 35;
 			
-			_verb=new MyTextField(16,100, 25, 0xFFFFFF, 'Verb');
+			_verb=new MyTextField(TextFormatAlign.LEFT, 16,100, 25, 0xFFFFFF, 'Verb');
 			addChild(_verb);
 			_verb.y=_txtfl_adjective.y + 35;
 			
-			_instruction=new MyTextField(12,300,25, 0xBDBE57, 'Ange ord, de separerades med kommatecken');
+			_instruction=new MyTextField(TextFormatAlign.CENTER, 12,300,25, 0xBDBE57, 'Ange ord, de separerades med kommatecken');
 			addChild(_instruction);
 			_instruction.x=100;
 			_instruction.y=_verb.y+35;
