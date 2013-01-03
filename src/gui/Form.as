@@ -6,7 +6,6 @@ package gui
 	import flash.events.Event;
 	import flash.text.TextFormatAlign;
 	
-
 	//skapa ett formulär för att ange orden
 	public class Form extends Sprite
 	{
