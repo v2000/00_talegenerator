@@ -11,6 +11,7 @@ package
 	import gui.MyTextField;
 	
 	import utils.XMLLoader;
+	import gui.Form;
 	
 	[SWF(width="500", height="350", frameRate="24", backgroundColor="0x005500")]
 	
@@ -67,8 +68,15 @@ package
 			var xmlList:XMLList = new XMLList( _xmlLoader.xml.saga.mysaga ); 
 			for each (var mysaga:XML in xmlList) 
 			{				
-				_header= mysaga.header;			
+				_header= mysaga.header;
 				_body= mysaga.body;
+				
+				while (_body.indexOf('\r')>=0) 
+					_body = _body.replace('\r', ' ');
+				
+				while (_body.indexOf('\n')>=0) 
+					_body = _body.replace('\n', ' ');
+				
 				trace(_body);
 			}
 		}

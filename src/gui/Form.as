@@ -1,4 +1,4 @@
-package
+package gui
 {
 	import flash.display.Sprite;
 	import flash.filters.BevelFilter;
@@ -6,8 +6,6 @@ package
 	import flash.events.Event;
 	import flash.text.TextFormatAlign;
 	
-	import gui.MyInputTextField;
-	import gui.MyTextField;
 
 	//skapa ett formulär för att ange orden
 	public class Form extends Sprite
